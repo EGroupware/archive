@@ -1,6 +1,6 @@
 <?php
 /**
- * eGroupWare - InfoLog
+ * EGroupware - MailArchive
  *
  * @link http://www.egroupware.org
  * @author Ralf Becker <rb@stylite.de>
