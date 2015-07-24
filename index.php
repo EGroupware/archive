@@ -5,7 +5,7 @@
  * @link http://www.egroupware.org
  * @author Ralf Becker <rb@stylite.de>
  * @package archive
- * @copyright (c) 2013/4 by Ralf Becker <rb@stylite.de>
+ * @copyright (c) 2013-15 by Ralf Becker <rb@stylite.de>
  * @license http://opensource.org/licenses/gpl-license.php GPL - GNU General Public License
  * @version $Id$
  */
@@ -19,14 +19,15 @@ $GLOBALS['egw_info'] = array(
 );
 include('../header.inc.php');
 
-// get url from setup.inc.php
-include EGW_SERVER_ROOT.'/archive/setup/setup.inc.php';
+// get url config
+$config = archive_hooks::config();
 
 list($url) = explode('?', $setup_info['archive']['url']);	// remove ?CA=greeting
 $src = $GLOBALS['egw_info']['server']['webserver_url'].'/archive/js/login.js';
 $attrs = array(
 	'CA' => 'login',
-	'login[username]' => $GLOBALS['egw_info']['user']['account_email'],
+	'login[username]' => $config['archive_auth'] == 'email' ?
+		$GLOBALS['egw_info']['user']['account_email'] : $GLOBALS['egw_info']['user']['account_lid'],
 	'login[password]' => $GLOBALS['egw_info']['user']['passwd'],
 );
 
