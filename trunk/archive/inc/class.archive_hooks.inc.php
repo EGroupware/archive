@@ -5,7 +5,7 @@
  * @link http://www.egroupware.org
  * @author Ralf Becker <rb@stylite.de>
  * @package archive
- * @copyright (c) 2013/4 by Ralf Becker <rb@stylite.de>
+ * @copyright (c) 2013-15 by Ralf Becker <rb@stylite.de>
  * @license http://opensource.org/licenses/gpl-license.php GPL - GNU General Public License
  * @version $Id$
  */
@@ -15,11 +15,72 @@
  */
 class archive_hooks
 {
+	/**
+	 * Get archive configuratione either from regular EGroupware configuration or if not set from archive/setup/setup.inc.php
+	 *
+	 * Also called from "site configuration" to set defaults.
+	 *
+	 * @return array with values for keys "archive_url" and "archive_auth"
+	 */
+	static function config()
+	{
+		if (!($config = config::read('archive')) || empty($config['archive_url']) || empty($config['archive_auth']))
+		{
+			$setup_info = array();
+			include EGW_SERVER_ROOT.'/archive/setup/setup.inc.php';
+
+			foreach(array(
+				'archive_url' => $setup_info['archive']['url'],
+				'archive_auth' => $setup_info['archive']['auth'],
+			) as $name => $value)
+			{
+				if (empty($config[$name]))
+				{
+					config::save_value($name, $config[$name] = $value, 'archive');
+				}
+			}
+		}
+		return $config;
+	}
+
+	/**
+	 *
+	 * @return array
+	 */
 	public static function csp_frame_src()
 	{
-		$setup_info = array();
-		include EGW_SERVER_ROOT.'/archive/setup/setup.inc.php';
+		$config = self::config();
 
-		return array(parse_url($setup_info['archive']['url'], PHP_URL_HOST));
+		$frm_srcs = array();
+		if (($host = parse_url($config['archive_url'], PHP_URL_HOST)))
+		{
+			$frm_srcs[] = $host;
+		}
+		return $frm_srcs;
+	}
+
+	/**
+	 * hooks to build Archive's sidebox-menu plus the admin and preferences sections
+	 *
+	 * @param string/array $args hook args
+	 */
+	static function all_hooks($args)
+	{
+		$location = is_array($args) ? $args['location'] : $args;
+
+		if ($GLOBALS['egw_info']['user']['apps']['admin'])
+		{
+			$file = Array(
+				'Site Configuration' => egw::link('/index.php','menuaction=admin.uiconfig.index&appname=archive'),
+			);
+			if ($location == 'admin')
+			{
+				display_section('archive',$file);
+			}
+			else
+			{
+				display_sidebox('archive',lang('Archive'),$file);
+			}
+		}
 	}
 }
