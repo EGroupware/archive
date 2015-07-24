@@ -22,7 +22,7 @@ include('../header.inc.php');
 // get url config
 $config = archive_hooks::config();
 
-list($url) = explode('?', $setup_info['archive']['url']);	// remove ?CA=greeting
+list($url) = explode('?', $config['archive_url']);	// remove ?CA=greeting
 $src = $GLOBALS['egw_info']['server']['webserver_url'].'/archive/js/login.js';
 $attrs = array(
 	'CA' => 'login',
