@@ -1,1 +1,3 @@
 archive	common	en	MailArchive
+archive url (either full url or path, if on same host)	admin	en	Archive URL (either full URL or path, if on same host)
+authentication uses	admin	en	Authentication uses
