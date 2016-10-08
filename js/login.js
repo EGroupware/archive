@@ -2,9 +2,9 @@
  * EGroupware - Benno Mail Archive
  *
  * @link http://www.egroupware.org
- * @author Ralf Becker <rb@stylite.de>
+ * @author Ralf Becker <rb@egroupware.org>
  * @package archive
- * @copyright (c) 2014 by Ralf Becker <rb@stylite.de>
+ * @copyright (c) 2014 by Ralf Becker <rb@egroupware.org>
  * @license http://opensource.org/licenses/gpl-license.php GPL - GNU General Public License
  * @version $Id$
  */

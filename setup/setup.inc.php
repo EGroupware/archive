@@ -3,9 +3,9 @@
  * EGroupware - Benno Mail Archive
  *
  * @link http://www.egroupware.org
- * @author Ralf Becker <rb@stylite.de>
+ * @author Ralf Becker <rb@egroupware.org>
  * @package archive
- * @copyright (c) 2013-15 by Ralf Becker <rb@stylite.de>
+ * @copyright (c) 2013-15 by Ralf Becker <rb@egroupware.org>
  * @license http://opensource.org/licenses/gpl-license.php GPL - GNU General Public License
  * @version $Id$
  */
@@ -19,7 +19,7 @@ $setup_info['archive']['enable']    = 1;
 $setup_info['archive']['author'] =
 $setup_info['archive']['maintainer'] = array(
 	'name'  => 'Ralf Becker',
-	'email' => 'rb@stylite.de'
+	'email' => 'rb@egroupware.org'
 );
 $setup_info['archive']['license']  = 'GPL';
 $setup_info['archive']['hooks']['csp-frame-src'] = 'archive_hooks::csp_frame_src';
