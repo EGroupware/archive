@@ -4,9 +4,8 @@
  * @link http://www.egroupware.org
  * @author Ralf Becker <rb@egroupware.org>
  * @package archive
- * @copyright (c) 2014 by Ralf Becker <rb@egroupware.org>
+ * @copyright (c) 2014-19 by Ralf Becker <rb@egroupware.org>
  * @license http://opensource.org/licenses/gpl-license.php GPL - GNU General Public License
- * @version $Id$
  */
 
 egw_LAB.wait(function(){

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE overlay PUBLIC "-//EGroupware GmbH//eTemplate 2//EN" "http://www.egroupware.org/etemplate2.dtd">
+<!-- $Id$ -->
+<overlay>
+	<template id="archive.config" template="" lang="" group="0" version="16.1">
+		<grid width="100%" class="admin-config egwGridView_grid">
+			<columns>
+				<column width="60%"/>
+				<column/>
+			</columns>
+			<rows>
+				<row>
+					<description value="Archive URL (either full URL or path, if on same host)" label="%s:"/>
+					<textbox id="newsettings[archive_url]" size="40"/>
+				</row>
+				<row>
+					<description value="Authentication uses" label="%s:"/>
+					<select id="newsettings[archive_auth]">
+						<option value="username">Username</option>
+						<option value="email">EMail address</option>
+					</select>
+				</row>
+			</rows>
+		</grid>
+	</template>
+</overlay>

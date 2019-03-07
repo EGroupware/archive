@@ -5,9 +5,8 @@
  * @link http://www.egroupware.org
  * @author Ralf Becker <rb@egroupware.org>
  * @package archive
- * @copyright (c) 2013-15 by Ralf Becker <rb@egroupware.org>
+ * @copyright (c) 2013-19 by Ralf Becker <rb@egroupware.org>
  * @license http://opensource.org/licenses/gpl-license.php GPL - GNU General Public License
- * @version $Id$
  */
 
 $GLOBALS['egw_info'] = array(
@@ -32,7 +31,7 @@ $attrs = array(
 );
 
 // jdots already uses an iframe, so no need to create an other one
-if (is_a($GLOBALS['egw']->framework, 'jdots_framework') || $_GET['content'])
+if (is_a($GLOBALS['egw']->framework, 'EGroupware\Api\Framework\Ajax') || $_GET['content'])
 {
 	// login.js creates a form with $attrs and posts it to $url
 	echo '<script type="text/javascript" id="archive_login_js" src="'.$src.'" data-url="'.htmlspecialchars($url).
