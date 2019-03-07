@@ -5,13 +5,12 @@
  * @link http://www.egroupware.org
  * @author Ralf Becker <rb@egroupware.org>
  * @package archive
- * @copyright (c) 2013-15 by Ralf Becker <rb@egroupware.org>
+ * @copyright (c) 2013-19 by Ralf Becker <rb@egroupware.org>
  * @license http://opensource.org/licenses/gpl-license.php GPL - GNU General Public License
- * @version $Id$
  */
 
 $setup_info['archive']['name']      = 'archive';
-$setup_info['archive']['version']   = '0.2';
+$setup_info['archive']['version']   = '17.1';
 $setup_info['archive']['app_order'] = 5;
 $setup_info['archive']['tables']    = array();
 $setup_info['archive']['enable']    = 1;
@@ -31,3 +30,9 @@ $setup_info['archive']['hooks']['admin'] = 'archive_hooks::all_hooks';
 // or configure your archive url & auth here instead following defaults:
 $setup_info['archive']['url'] = '/benno/index.php?CA=greeting#';
 $setup_info['archive']['auth'] = 'username';
+
+// Dependencies for this app to work
+$setup_info['admin']['depends'][] = array(
+	'appname' => 'api',
+	'versions' => Array('17.1')
+);

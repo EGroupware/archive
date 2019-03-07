@@ -5,10 +5,12 @@
  * @link http://www.egroupware.org
  * @author Ralf Becker <rb@egroupware.org>
  * @package archive
- * @copyright (c) 2013-15 by Ralf Becker <rb@egroupware.org>
+ * @copyright (c) 2013-19 by Ralf Becker <rb@egroupware.org>
  * @license http://opensource.org/licenses/gpl-license.php GPL - GNU General Public License
- * @version $Id$
  */
+
+use EGroupware\Api;
+use EGroupware\Api\Egw;
 
 /**
  * Hooks for Benno Mail Archive
@@ -24,7 +26,7 @@ class archive_hooks
 	 */
 	static function config()
 	{
-		if (!($config = config::read('archive')) || empty($config['archive_url']) || empty($config['archive_auth']))
+		if (!($config = Api\Config::read('archive')) || empty($config['archive_url']) || empty($config['archive_auth']))
 		{
 			$setup_info = array();
 			include EGW_SERVER_ROOT.'/archive/setup/setup.inc.php';
@@ -36,7 +38,7 @@ class archive_hooks
 			{
 				if (empty($config[$name]))
 				{
-					config::save_value($name, $config[$name] = $value, 'archive');
+					Api\Config::save_value($name, $config[$name] = $value, 'archive');
 				}
 			}
 		}
@@ -71,7 +73,7 @@ class archive_hooks
 		if ($GLOBALS['egw_info']['user']['apps']['admin'])
 		{
 			$file = Array(
-				'Site Configuration' => egw::link('/index.php','menuaction=admin.uiconfig.index&appname=archive'),
+				'Site Configuration' => Egw::link('/index.php','menuaction=admin.admin_config.index&appname=archive'),
 			);
 			if ($location == 'admin')
 			{
