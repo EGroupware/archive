@@ -3,17 +3,17 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-<path fill="none" stroke="#8B8E8D" stroke-linecap="round" stroke-miterlimit="10" d="M0.336,13.591
+<path fill="none" stroke-linecap="round" d="M0.336,13.591
 	c0,1.194,2.565,13.709,2.871,14.144"/>
-<path fill="none" stroke="#8B8E8D" stroke-linecap="round" stroke-miterlimit="10" d="M5.406,11.404
+<path fill="none" stroke-linecap="round" d="M5.406,11.404
 	c1.668-0.051,19.014-5.155,19.603-5.719"/>
-<path fill="none" stroke="#8B8E8D" stroke-linecap="round" stroke-miterlimit="10" d="M3.436,27.695
+<path fill="none" stroke-linecap="round" d="M3.436,27.695
 	c2.399-0.073,27.367-6.373,28.216-7.061"/>
-<path fill="none" stroke="#8B8E8D" stroke-linecap="round" stroke-miterlimit="10" d="M31.584,20.436
+<path fill="none" stroke-linecap="round" d="M31.584,20.436
 	c-0.062-1.289-3.738-14.657-4.12-15.105"/>
-<path fill="none" stroke="#8B8E8D" stroke-linecap="round" stroke-miterlimit="10" d="M27.363,5.213
+<path fill="none" stroke-linecap="round" d="M27.363,5.213
 	c-1.147,0.866-10.777,13.133-10.907,13.829"/>
-<path fill="none" stroke="#8B8E8D" stroke-linecap="round" stroke-miterlimit="10" d="M1.183,12.964
+<path fill="none" stroke-linecap="round" d="M1.183,12.964
 	c0.301-0.345,13.89,5.142,15.245,6.104"/>
 <g id="XMLID_2_">
 	<path fill="#39393D" d="M24.174,15.258c0,0.033,0,0.064,0,0.098c-0.006,0-0.013,0-0.02,0c0-0.136,0-0.272,0-0.408
