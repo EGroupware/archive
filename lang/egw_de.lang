@@ -1,3 +1,3 @@
-archive	common	de	MailArchive
+archive	common	de	Mail-Archiv
 archive url (either full url or path, if on same host)	admin	de	Archiv URL (entweder komplette URL oder Pfad, wenn auf gleichem Host)
-authentication uses	admin	de	Authentifizierung benützt
+authentication uses	admin	de	Authentifizierung verwendet
