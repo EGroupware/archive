@@ -10,7 +10,7 @@
  */
 
 $setup_info['archive']['name']      = 'archive';
-$setup_info['archive']['version']   = '17.1';
+$setup_info['archive']['version']   = '19.1';
 $setup_info['archive']['app_order'] = 5;
 $setup_info['archive']['tables']    = array();
 $setup_info['archive']['enable']    = 1;
@@ -34,5 +34,5 @@ $setup_info['archive']['auth'] = 'username';
 // Dependencies for this app to work
 $setup_info['admin']['depends'][] = array(
 	'appname' => 'api',
-	'versions' => Array('17.1')
+	'versions' => Array('19.1')
 );
