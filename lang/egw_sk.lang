@@ -1,0 +1,3 @@
+archive	common	sk	ArchívPošty
+archive url (either full url or path, if on same host)	admin	sk	URL archívu (buď celá URL alebo cesta, ak je na rovnakom stroji)
+authentication uses	admin	sk	Použiť pre autentifikáciu
