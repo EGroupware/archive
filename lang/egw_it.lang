@@ -1,0 +1,3 @@
+archive	common	it	MailArchive
+archive url (either full url or path, if on same host)	admin	it	URL dell'archivio (completo, oppure percorso se sullo stesso host)
+authentication uses	admin	it	Autenticazione usata
