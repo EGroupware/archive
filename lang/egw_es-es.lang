@@ -1,0 +1,3 @@
+archive	common	es-es	Archivo de correo
+archive url (either full url or path, if on same host)	admin	es-es	URL del archivo (URL completa o ruta, si está en el mismo host)
+authentication uses	admin	es-es	Usos de autenticación
