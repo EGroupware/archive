@@ -1,0 +1,4 @@
+archive	common	fr	Archives mail
+archive url (either full url or path, if on same host)	admin	fr	URL d'archivage (soit l'URL, soit le chemin sur le serveur)
+authentication uses	admin	fr	Authentication via
+email address	archive	fr	Adresse email

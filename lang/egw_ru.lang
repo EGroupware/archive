@@ -1,0 +1,3 @@
+archive	common	ru	Почтовый архив
+archive url (either full url or path, if on same host)	admin	ru	URL архива (полный URL или путь, если локально)
+authentication uses	admin	ru	Использование аутентификации
