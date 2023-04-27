@@ -23,6 +23,7 @@ $config = archive_hooks::config();
 
 list($url) = explode('?', $config['archive_url']);	// remove ?CA=greeting
 $src = $GLOBALS['egw_info']['server']['webserver_url'].'/archive/js/login.js';
+$src .= '?'.filemtime(EGW_SERVER_ROOT.'/archive/js/login.js');
 $attrs = array(
 	'CA' => 'login',
 	'login[username]' => $config['archive_auth'] == 'email' ?
@@ -30,7 +31,7 @@ $attrs = array(
 	'login[password]' => $GLOBALS['egw_info']['user']['passwd'],
 );
 
-// jdots already uses an iframe, so no need to create an other one
+// jdots already uses an iframe, so no need to create another one
 if (is_a($GLOBALS['egw']->framework, 'EGroupware\Api\Framework\Ajax') || $_GET['content'])
 {
 	// login.js creates a form with $attrs and posts it to $url
