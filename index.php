@@ -28,7 +28,7 @@ $attrs = array(
 	'CA' => 'login',
 	'login[username]' => $config['archive_auth'] == 'email' ?
 		$GLOBALS['egw_info']['user']['account_email'] : $GLOBALS['egw_info']['user']['account_lid'],
-	'login[password]' => $GLOBALS['egw_info']['user']['passwd'],
+	'login[password]' => $GLOBALS['egw']->session->passwd,
 );
 
 // jdots already uses an iframe, so no need to create another one
