@@ -42,6 +42,6 @@ else
 {
 	// et2_container class triggers automatic resize of iframe by idots.js
 	echo "\n".'<div style="width: 100%; height: 100%; min-width: 800px;">';
-	echo "\n\t".'<iframe src="'.$_SERVER['PHP_SELF'].'?content=1" class="et2_container" name="site" width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0"></iframe>';
+	echo "\n\t".'<iframe src="'.htmlspecialchars($_SERVER['PHP_SELF']).'?content=1" class="et2_container" name="site" width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0"></iframe>';
 	echo "\n</div>\n";
 }
