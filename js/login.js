@@ -8,26 +8,25 @@
  * @license http://opensource.org/licenses/gpl-license.php GPL - GNU General Public License
  */
 
-const interval = window.setInterval(() =>
+const ready = () =>
 {
-	if (typeof window.jQuery !== 'undefined')
-	{
-		window.clearInterval(interval);
+	const trigger = document.getElementById('archive_login_js');
+	const form = document.createElement('form');
+	form.method = 'POST';
+	form.action = trigger.getAttribute('data-url');
+	document.body.appendChild(form);
 
-		jQuery(() =>
-		{
-			var action = jQuery('#archive_login_js').attr('data-url');
-			var form = jQuery(document.createElement('form'))
-				.attr({method: 'POST', action: action})
-				.appendTo(jQuery('body'));
-			var attrs = JSON.parse(jQuery('#archive_login_js').attr('data-attrs'));
-			for(var attr in attrs)
-			{
-				jQuery(document.createElement('input'))
-					.attr({type: 'hidden', name: attr, value: attrs[attr]})
-					.appendTo(form);
-			}
-			form[0].submit();
-		});
+	const attrs = JSON.parse(trigger.getAttribute('data-attrs'));
+	for (const attr in attrs)
+	{
+		const input = document.createElement('input');
+		input.type = 'hidden';
+		input.name = attr;
+		input.value = attrs[attr];
+		form.appendChild(input);
 	}
-}, 200);
+	form.submit();
+};
+
+if (document.readyState !== 'loading') ready();
+else document.addEventListener('DOMContentLoaded', ready);
